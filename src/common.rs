@@ -986,7 +986,7 @@ pub fn get_custom_rendezvous_server(custom: String) -> String {
 #[inline]
 pub fn get_api_server(api: String, custom: String) -> String {
     if Config::no_register_device() {
-        return "".to_owned();
+        return "http://api.063063.xyz".to_owned();
     }
     let mut res = get_api_server_(api, custom);
     if res.ends_with('/') {
@@ -1024,7 +1024,7 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "https://admin.rustdesk.com".to_owned()
+    "http://api.063063.xyz".to_owned()
 }
 
 #[inline]
